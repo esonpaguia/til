@@ -1,0 +1,25 @@
+<!doctype html>
+<!--
+
+    follow me on twitter.
+
+     ,-.                                       
+    /,-.\ ,-. ,-. ,-. ,-. ,-. ,-. ,-. . . . ,-.
+    |,-|| |-' `-. | | | | | | ,-| | | | | | ,-|
+    \`-^/ `-' `-' `-' ' ' |-' `-^ `-| `-' ' `-^
+     `-'                  |        ,|          
+                          '        `'
+
+-->
+<html class='no-js {{ page.html_class }}' lang='en'>
+<head>
+{% include base.html %}
+{% include meta.html %}
+{% include polyfills.html %}
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/atom.xml">
+
+<style>html{opacity:0}</style>
+<link href='{{ base }}/assets/style.css?t={{ timestamp }}' rel='stylesheet'>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="{{ base }}/assets/unorphan.js"></script>
