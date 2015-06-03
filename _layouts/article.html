@@ -1,0 +1,15 @@
+---
+type: article
+---
+{% include head.html %}
+{% include body.html %}
+{% include site-header.html %}
+
+{% include post.html post=page content=content %}
+
+{% if page.previous %}
+  {% include next-article.html page=page.previous %}
+{% endif %}
+
+{% include about-the-site.html %}
+{% include end.html %}
