@@ -17,6 +17,6 @@ Here's my take and redo of the graph:
   * Like never use 3D, especially in single dimension
   * Remove the gridlines. But if you think it will be helpful for your audience to trace their finger from the data to the axis, or you feel that your data will be more effectively processed, you can leave the gridlines. But make them thin and use a light color like grey.
 
-![Image of My Version of QC Annual Income Budget](https://raw.githubusercontent.com/esonpaguia/til/gh-pages/images/annual_income_of_qc_my_version.jpg)
+![Image of My Version of QC Annual Income Budget](https://raw.githubusercontent.com/esonpaguia/til/gh-pages/images/annual_income_of_qc_my_version.png)
 
 Any time you put information in front of your audience, you are creating cognitive load and asking them to use their brain power to process that information. Visual clutter creates excessive cognitive load that can hinder the transmission of our message.
