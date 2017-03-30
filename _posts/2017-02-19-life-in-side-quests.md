@@ -61,8 +61,8 @@ I prefix each mission with a projected date of completion (`1702` is 2017, Febru
 <div class='mission-item -goals'>
 <ul>
 <li>1703 Start a blog</li>
-<li>1704 Couch to 5K</li>
-<li>1706 Vacation to Paris</li>
+<li>1704 Couch to Crossfit</li>
+<li>1706 Vacation to Hong Kong</li>
 <li>1707 Remodel kitchen</li>
 <li>1707 Learn guitar</li>
 </ul>
