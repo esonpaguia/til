@@ -13,7 +13,7 @@ Before, all charts look the same. It really doesn't bother what or how people pr
 Here's my take and redo of the graph:
 
 * Let the data take center stage
-  * A two-series line graph is more suited to plot continuous data. It implies a connection all through out. Not just subdividing the budget vs income per year, but shows the relationship/gap per year. I believe the people behind this would want to emphasize that there is an increase yearly.
+  * A two-series line graph is more suited to plot continuous data. It implies a connection all through out. Not just subdividing the budget vs income per year, but shows the relationship/gap per year. I believe the people behind this would want to emphasize that they always exceed expectation.
 * Strip off anything that isn’t adding informative value
   * Like never use 3D, especially in single dimension
   * Remove the gridlines. But if you think it will be helpful for your audience to trace their finger from the data to the axis, or you feel that your data will be more effectively processed, you can leave the gridlines. But make them thin and use a light color like grey.
