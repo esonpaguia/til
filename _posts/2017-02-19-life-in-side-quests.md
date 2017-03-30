@@ -24,13 +24,17 @@ A *mission* is an achievable goal within 3 months or less. A mission should be b
 </ul>
 </div>
 <div class='mission-item'>
-<h3>1704 Couch to 5K <em>#fitness</em></h3>
+<h3>1704 Couch to Crossfit <em>#fitness</em></h3>
 <ul>
-<li>Study the running program</li>
-<li>Week 1 - 0.5km</li>
-<li>Week 2 - 1km</li>
-<li>Week 3 - 2.5km</li>
-<li>Week 4 - 5km</li>
+<li>Find a gym</li>
+<li>Get a trial</li>
+<li>Enroll</li>
+<li>Month 1 - Basics</li>
+<li>Month 2 - Basics</li>
+<li>Month 3 - Basics</li>
+<li>Month 4 - Intermediate</li>
+<li>Month 5 - Intermediate</li>
+<li>Month 6 - Intermediate</li>
 </ul>
 </div>
 <div class='mission-item'>
