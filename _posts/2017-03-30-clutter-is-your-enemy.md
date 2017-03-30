@@ -1,6 +1,6 @@
 ---
 title: Clutter is your enemy
-tags: [DataVisualization]
+tags: [Visualization]
 description: Think about the visual elements we allow into our communications
 ---
 
