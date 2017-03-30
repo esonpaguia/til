@@ -131,9 +131,3 @@ store = createStore(reducers, {}, applyMiddleware(
   Ticker({ interval: 1000 })
 )
 ```
-
-## See also
-
-Check out [Redux on devguides.io](http://devguides.io/redux)! Devguides.io is my new pet project where I make pocket-sized explainers for web development concepts.
-
-[Redux]: http://redux.js.org/
