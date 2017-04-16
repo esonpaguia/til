@@ -98,6 +98,7 @@ library("rstudioapi")
     # Text stemming
     #dataCorpus10 <- tm_map(dataCorpus9, stemDocument)
     ```
+
 4. Build a term-document matrix
   Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package can be used as follow:
   ```
