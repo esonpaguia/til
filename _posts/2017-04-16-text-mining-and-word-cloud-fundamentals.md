@@ -65,7 +65,6 @@ library("rstudioapi")
     dataCorpus2 <- tm_map(dataCorpus1, toSpace, "@")
     dataCorpus3 <- tm_map(dataCorpus2, toSpace, "\\|")
     ```
-
   - Cleaning the text
     The tm_map() function is used to remove unnecessary white space, to convert the text to lower case, to remove common stopwords like "the", "we".
 
@@ -99,10 +98,8 @@ library("rstudioapi")
     # Text stemming
     #dataCorpus10 <- tm_map(dataCorpus9, stemDocument)
     ```
-
 4. Build a term-document matrix
   Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package can be used as follow:
-
   ```
   dtm <- TermDocumentMatrix(dataCorpus10)
   m <- as.matrix(dtm)
@@ -112,7 +109,6 @@ library("rstudioapi")
   ```
 
 5. Generate the Word cloud
-
   ```
   set.seed(1234)
   wordcloud(words = d$word, freq = d$freq, min.freq = 1,
