@@ -17,7 +17,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
 1. Create a text file
   - Copy and paste the text in a plain text file (e.g. genesis.txt)
   - Save the file
-2. Install and load required libraries
+2. Install and load required libraries123
   ```
   # Install
   install.packages("tm")  # for text mining
@@ -33,7 +33,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
   library("RColorBrewer")
   library("rstudioapi")
   ```
-  
+
 3. Text mining
   - Load text
     The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
