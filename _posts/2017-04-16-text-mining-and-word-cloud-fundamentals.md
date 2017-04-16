@@ -17,23 +17,23 @@ The procedure of creating word clouds is very simple in R if you know the differ
 1. Create a text file
   - Copy and paste the text in a plain text file (e.g. genesis.txt)
   - Save the file
-2. Install and load required libraries
+2. Install and load required libraries222
 
-  ```
-  # Install
-  install.packages("tm")  # for text mining
-  install.packages("SnowballC") # for text stemming
-  install.packages("wordcloud") # word-cloud generator
-  install.packages("RColorBrewer") # color palettes
-  install.packages("rstudioapi") # rstudio environment reference
+    ```
+    # Install
+    install.packages("tm")  # for text mining
+    install.packages("SnowballC") # for text stemming
+    install.packages("wordcloud") # word-cloud generator
+    install.packages("RColorBrewer") # color palettes
+    install.packages("rstudioapi") # rstudio environment reference
 
-  # Load
-  library("tm")
-  library("SnowballC")
-  library("wordcloud")
-  library("RColorBrewer")
-  library("rstudioapi")
-  ```
+    # Load
+    library("tm")
+    library("SnowballC")
+    library("wordcloud")
+    library("RColorBrewer")
+    library("rstudioapi")
+    ```
 
 3. Text mining
   - Load text
