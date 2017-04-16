@@ -35,7 +35,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
     library("rstudioapi")
     ```
 
-3. Text mining222
+3. Text mining
   - Load text
     The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
     1. We start by importing the text file created in Step 1
@@ -59,47 +59,52 @@ The procedure of creating word clouds is very simple in R if you know the differ
         inspect(dataCorpus)
         ```
 
-  - Text transformation
-    Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
-    ```
-    toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
-    dataCorpus1 <- tm_map(dataCorpus, toSpace, "/")
-    dataCorpus2 <- tm_map(dataCorpus1, toSpace, "@")
-    dataCorpus3 <- tm_map(dataCorpus2, toSpace, "\\|")
-    ```
+  - Text transformation123
+
+      Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
+
+      ```
+      toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
+      dataCorpus1 <- tm_map(dataCorpus, toSpace, "/")
+      dataCorpus2 <- tm_map(dataCorpus1, toSpace, "@")
+      dataCorpus3 <- tm_map(dataCorpus2, toSpace, "\\|")
+      ```
+
   - Cleaning the text
-    The tm_map() function is used to remove unnecessary white space, to convert the text to lower case, to remove common stopwords like "the", "we".
 
-    The information value of "stopwords" is near zero due to the fact that they are so common in a language. Removing this kind of words is useful before further analyses. For "stopwords", supported languages are Danish, Dutch, English, Finnish, French, German, Hungarian, Italian, Norwegian, Portuguese, Russian, Spanish and Swedish. Language names are case sensitive.
+      The tm_map() function is used to remove unnecessary white space, to convert the text to lower case, to remove common stopwords like "the", "we".
 
-    You could also remove numbers and punctuation with removeNumbers and removePunctuation arguments.
+      The information value of "stopwords" is near zero due to the fact that they are so common in a language. Removing this kind of words is useful before further analyses. For "stopwords", supported languages are Danish, Dutch, English, Finnish, French, German, Hungarian, Italian, Norwegian, Portuguese, Russian, Spanish and Swedish. Language names are case sensitive.
 
-    Another important preprocessing step is to make a text stemming which reduces words to their root form. In other words, this process removes suffixes from words to make it simple and to get the common origin. For example, a stemming process reduces the words "moving", "moved" and "movement" to the root word, "move".
+      You could also remove numbers and punctuation with removeNumbers and removePunctuation arguments.
 
-    The R code below can be used to clean your text:
-    ```
-    # Convert the text to lower case
-    dataCorpus4 <- tm_map(dataCorpus3, content_transformer(tolower))
+      Another important preprocessing step is to make a text stemming which reduces words to their root form. In other words, this process removes suffixes from words to make it simple and to get the common origin. For example, a stemming process reduces the words "moving", "moved" and "movement" to the root word, "move".
 
-    # Remove numbers
-    dataCorpus5 <- tm_map(dataCorpus4, removeNumbers)
+      The R code below can be used to clean your text:
 
-    # Remove english common stopwords
-    dataCorpus6 <- tm_map(dataCorpus5, removeWords, stopwords("english"))
+      ```
+      # Convert the text to lower case
+      dataCorpus4 <- tm_map(dataCorpus3, content_transformer(tolower))
 
-    # Remove your own stop word
-    # specify your stopwords as a character vector
-    dataCorpus7 <- tm_map(dataCorpus6, removeWords, c("said", "will"))
+      # Remove numbers
+      dataCorpus5 <- tm_map(dataCorpus4, removeNumbers)
 
-    # Remove punctuations
-    dataCorpus8 <- tm_map(dataCorpus7, removePunctuation)
+      # Remove english common stopwords
+      dataCorpus6 <- tm_map(dataCorpus5, removeWords, stopwords("english"))
 
-    # Eliminate extra white spaces
-    dataCorpus9 <- tm_map(dataCorpus8, stripWhitespace)
+      # Remove your own stop word
+      # specify your stopwords as a character vector
+      dataCorpus7 <- tm_map(dataCorpus6, removeWords, c("said", "will"))
 
-    # Text stemming
-    #dataCorpus10 <- tm_map(dataCorpus9, stemDocument)
-    ```
+      # Remove punctuations
+      dataCorpus8 <- tm_map(dataCorpus7, removePunctuation)
+
+      # Eliminate extra white spaces
+      dataCorpus9 <- tm_map(dataCorpus8, stripWhitespace)
+
+      # Text stemming
+      #dataCorpus10 <- tm_map(dataCorpus9, stemDocument)
+      ```
 
 4. Build a term-document matrix
   Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package can be used as follow:
