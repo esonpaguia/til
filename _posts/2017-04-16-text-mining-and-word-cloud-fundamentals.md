@@ -63,9 +63,7 @@ library("rstudioapi")
       ```
 
   - Text transformation
-    Transformation is performed using tm_map() function to replace, for example, special characters from the text.
-
-    Replacing "/", "@" and "|" with space:
+    Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
 
     ```
     toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
