@@ -37,7 +37,9 @@ The procedure of creating word clouds is very simple in R if you know the differ
 
 3. Text mining
   - Load text
+
     The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
+
     1. We start by importing the text file created in Step 1
       To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
 
@@ -59,9 +61,9 @@ The procedure of creating word clouds is very simple in R if you know the differ
         inspect(dataCorpus)
         ```
 
-  - Text transformation123
+  - Text transformation
 
-      Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
+      Transformation is performed using tm_map function to replace, for example, special characters from the text.
 
       ```
       toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
