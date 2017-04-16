@@ -17,7 +17,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
 1. Create a text file
   - Copy and paste the text in a plain text file (e.g. genesis.txt)
   - Save the file
-2. Install and load required libraries222
+2. Install and load required libraries
 
     ```
     # Install
@@ -35,25 +35,29 @@ The procedure of creating word clouds is very simple in R if you know the differ
     library("rstudioapi")
     ```
 
-3. Text mining
+3. Text mining222
   - Load text
     The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
     1. We start by importing the text file created in Step 1
       To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
-      ```
-      setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-      filePath <- paste(getwd(), "/data", sep = "")
-      files <- as.character((list.files(path = filePath)))
-      data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
-      ```
+
+        ```
+        setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+        filePath <- paste(getwd(), "/data", sep = "")
+        files <- as.character((list.files(path = filePath)))
+        data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
+        ```
+
     2. Load the data as a corpus
-      ```
-      dataCorpus <- Corpus(VectorSource(data))
-      ```
+
+        ```
+        dataCorpus <- Corpus(VectorSource(data))
+        ```
     3. Inspect the content of the document
-      ```
-      inspect(dataCorpus)
-      ```
+
+        ```
+        inspect(dataCorpus)
+        ```
 
   - Text transformation
     Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
