@@ -46,14 +46,17 @@ library("rstudioapi")
       files <- as.character((list.files(path = filePath)))
       data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
       ```
+
     2. Load the data as a corpus
       ```
       dataCorpus <- Corpus(VectorSource(data))
       ```
+
     3. Inspect the content of the document
       ```
       inspect(dataCorpus)
       ```
+
   - Text transformation
     Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
     ```
