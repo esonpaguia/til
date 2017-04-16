@@ -42,7 +42,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
 
       1. We start by importing the text file created in Step 1
 
-        To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
+          To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
 
           ```
           setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
