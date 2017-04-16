@@ -38,28 +38,30 @@ The procedure of creating word clouds is very simple in R if you know the differ
 3. Text mining
   - Load text
 
-    The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
+      The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
 
-    1. We start by importing the text file created in Step 1
-      To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
+      1. We start by importing the text file created in Step 1
 
-        ```
-        setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-        filePath <- paste(getwd(), "/data", sep = "")
-        files <- as.character((list.files(path = filePath)))
-        data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
-        ```
+        To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
 
-    2. Load the data as a corpus
+          ```
+          setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+          filePath <- paste(getwd(), "/data", sep = "")
+          files <- as.character((list.files(path = filePath)))
+          data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
+          ```
 
-        ```
-        dataCorpus <- Corpus(VectorSource(data))
-        ```
-    3. Inspect the content of the document
+      2. Load the data as a corpus
 
-        ```
-        inspect(dataCorpus)
-        ```
+          ```
+          dataCorpus <- Corpus(VectorSource(data))
+          ```
+
+      3. Inspect the content of the document
+
+          ```
+          inspect(dataCorpus)
+          ```
 
   - Text transformation
 
