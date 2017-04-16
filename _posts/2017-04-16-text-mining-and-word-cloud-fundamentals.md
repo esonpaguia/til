@@ -19,7 +19,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
   - Save the file
 2. Install and load required libraries
 
-```r
+```
 # Install
 install.packages("tm")  # for text mining
 install.packages("SnowballC") # for text stemming
@@ -43,7 +43,7 @@ library("rstudioapi")
 
       To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
 
-      ```r
+      ```
       setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
       filePath <- paste(getwd(), "/data", sep = "")
       files <- as.character((list.files(path = filePath)))
@@ -52,20 +52,20 @@ library("rstudioapi")
 
     2. Load the data as a corpus
 
-      ```js
+      ```
       dataCorpus <- Corpus(VectorSource(data))
       ```
 
     3. Inspect the content of the document
 
-      ```js
+      ```
       inspect(dataCorpus)
       ```
 
   - Text transformation
     Transformation is performed using tm_map() function to replace, for example, special characters from the text.
 
-    Replacing “/”, “@” and “|” with space:
+    Replacing "/", "@" and "|" with space:
 
     ```
     toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
