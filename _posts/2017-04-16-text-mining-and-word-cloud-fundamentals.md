@@ -33,6 +33,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
   library("RColorBrewer")
   library("rstudioapi")
   ```
+  
 3. Text mining
   - Load text
     The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
