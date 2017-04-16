@@ -65,6 +65,7 @@ library("rstudioapi")
     dataCorpus2 <- tm_map(dataCorpus1, toSpace, "@")
     dataCorpus3 <- tm_map(dataCorpus2, toSpace, "\\|")
     ```
+
   - Cleaning the text
     The tm_map() function is used to remove unnecessary white space, to convert the text to lower case, to remove common stopwords like "the", "we".
 
@@ -75,7 +76,6 @@ library("rstudioapi")
     Another important preprocessing step is to make a text stemming which reduces words to their root form. In other words, this process removes suffixes from words to make it simple and to get the common origin. For example, a stemming process reduces the words "moving", "moved" and "movement" to the root word, "move".
 
     The R code below can be used to clean your text:
-
     ```
     # Convert the text to lower case
     dataCorpus4 <- tm_map(dataCorpus3, content_transformer(tolower))
