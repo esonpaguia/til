@@ -108,23 +108,26 @@ The procedure of creating word clouds is very simple in R if you know the differ
       #dataCorpus10 <- tm_map(dataCorpus9, stemDocument)
       ```
 
-4. Build a term-document matrix
-  Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package can be used as follow:
-  ```
-  dtm <- TermDocumentMatrix(dataCorpus10)
-  m <- as.matrix(dtm)
-  v <- sort(rowSums(m),decreasing=TRUE)
-  d <- data.frame(word = names(v),freq=v)
-  head(d, 10)
-  ```
+4. Build a term-document matrix 123
+
+    Document matrix is a table containing the frequency of the words. Column names are words and row names are documents. The function TermDocumentMatrix() from text mining package can be used as follow:
+
+    ```
+    dtm <- TermDocumentMatrix(dataCorpus10)
+    m <- as.matrix(dtm)
+    v <- sort(rowSums(m),decreasing=TRUE)
+    d <- data.frame(word = names(v),freq=v)
+    head(d, 10)
+    ```
 
 5. Generate the Word cloud
-  ```
-  set.seed(1234)
-  wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+
+    ```
+    set.seed(1234)
+    wordcloud(words = d$word, freq = d$freq, min.freq = 1,
           max.words=200, random.order=FALSE, rot.per=0.35,
           colors=brewer.pal(8, "Dark2"))
-  ```
+    ```
 
 You can clone this repository to get the finished product.
 
