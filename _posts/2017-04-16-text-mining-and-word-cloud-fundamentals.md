@@ -47,19 +47,19 @@ library("rstudioapi")
       setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
       filePath <- paste(getwd(), "/data", sep = "")
       files <- as.character((list.files(path = filePath)))
-      bibleData <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
+      data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
       ```
 
     2. Load the data as a corpus
 
       ```
-      bibleCorpus <- Corpus(VectorSource(data))
+      dataCorpus <- Corpus(VectorSource(data))
       ```
 
     3. Inspect the content of the document
 
       ```
-      inspect(bibleCorpus)
+      inspect(dataCorpus)
       ```
 
   - Text transformation
@@ -128,3 +128,7 @@ library("rstudioapi")
           max.words=200, random.order=FALSE, rot.per=0.35,
           colors=brewer.pal(8, "Dark2"))
   ```
+
+You can clone this repository to get the finished product.
+
+[biblewordcount](https://github.com/esonpaguia/biblewordcloud)
