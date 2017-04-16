@@ -42,26 +42,20 @@ library("rstudioapi")
     1. We start by importing the text file created in Step 1
 
       To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
-
       ```
       setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
       filePath <- paste(getwd(), "/data", sep = "")
       files <- as.character((list.files(path = filePath)))
       data <- unname(sapply(paste(filePath,.Platform$file.sep,files,sep=""), readLines))
       ```
-
     2. Load the data as a corpus
-
       ```
       dataCorpus <- Corpus(VectorSource(data))
       ```
-
     3. Inspect the content of the document
-
       ```
       inspect(dataCorpus)
       ```
-
   - Text transformation
     Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
 
