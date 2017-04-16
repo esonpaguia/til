@@ -15,7 +15,7 @@ The procedure of creating word clouds is very simple in R if you know the differ
 
 # Steps to create a word cloud in R
 1. Create a text file
-  - Copy and paste the text in a plain text file (e.g : ml.txt)
+  - Copy and paste the text in a plain text file (e.g. genesis.txt)
   - Save the file
 2. Install and load required libraries
 
@@ -38,9 +38,7 @@ library("rstudioapi")
 3. Text mining
   - Load text
     The text is loaded using Corpus() function from text mining (tm) package. Corpus is a list of a document (in our case, we only have one document).
-
     1. We start by importing the text file created in Step 1
-
       To import the file saved locally in your computer, type the following R code. You will be asked to choose the text file interactively.
       ```
       setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
@@ -58,14 +56,12 @@ library("rstudioapi")
       ```
   - Text transformation
     Transformation is performed using tm_map() function to replace, for example, special characters from the text. Replacing "/", "@" and "|" with space:
-
     ```
     toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
     dataCorpus1 <- tm_map(dataCorpus, toSpace, "/")
     dataCorpus2 <- tm_map(dataCorpus1, toSpace, "@")
     dataCorpus3 <- tm_map(dataCorpus2, toSpace, "\\|")
     ```
-
   - Cleaning the text
     The tm_map() function is used to remove unnecessary white space, to convert the text to lower case, to remove common stopwords like "the", "we".
 
